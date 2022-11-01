@@ -17,10 +17,11 @@ public class SpawnManager : MonoBehaviour
             for (int x = 0; x < widht; x++)
             {
                 int randomValue = Random.Range(0, 3);
+                origin = new Vector3(x - Center(widht), 0, z - Center(height));
                 GameObject obj = Instantiate(collectables[0], origin, transform.rotation, transform);
-                origin = new Vector3((x + 1)*1.5f, 0f, z);
+
             }
-            origin = new Vector3(0f, 0f, z + 1);
+            //origin = new Vector3(0f, 0f, z + 1);
 
         }
     }
