@@ -5,10 +5,10 @@ using DG.Tweening;
 
 public class PlayerController : MonoBehaviour
 {
-    public List<GameObject> moneys;
+    public List<GameObject> moneysOnTheBack;
     public Transform charectersBackParent;
     public Transform charectersBackPos;
-    public MoneyPositions moneyPositions;
+    public Building moneyPositions;
 
     public static PlayerController Instance;
     private void Awake()
@@ -28,35 +28,38 @@ public class PlayerController : MonoBehaviour
         if (other.CompareTag("Collectable"))
         {
             other.GetComponent<Money>().isMove = true;
-            moneys.Add(other.gameObject);
-            charectersBackPos.position += Vector3.up / 3f;
-            //other.transform.DOScale(new Vector3(.8f, .4f, .4f), .5f);
+            moneysOnTheBack.Add(other.gameObject);
+            charectersBackPos.localPosition += Vector3.up / 3f;
 
         }
         else if (other.CompareTag("SellArea"))
         {
-            if (moneys.Count > 0)
+            if (moneysOnTheBack.Count > 0)
             {
-                Buy(other.GetComponent<MoneyPositions>().count);
+                print("*****");
+                StartCoroutine(Buy(other.GetComponent<Building>().count));
 
             }
         }
     }
 
-    private void Buy(int count)
+    private IEnumerator Buy(int count)
     {
-        for (int i = 0; i < moneys.Count; i++)
+        int moneysCount = moneysOnTheBack.Count;
+        for (int i = 0; i < moneysCount; i++)
         {
+            GameObject moneyOnBack = moneysOnTheBack[moneysOnTheBack.Count - 1];
+            moneyOnBack.transform.parent = moneyPositions.transform;
+            moneyOnBack.transform.DOMove(moneyPositions.moneyPositionList[count].position, 1f);
+            moneyOnBack.transform.DORotate(Vector3.zero, 1f);
+            moneyOnBack.transform.GetComponent<BoxCollider>().enabled = false;
 
-            moneys[moneys.Count - 1].transform.parent = moneyPositions.transform;
-            moneys[moneys.Count - 1].transform.DOMove(moneyPositions.moneyPositionList[count].position, 1f);
-            moneys[moneys.Count - 1].transform.DORotate(Vector3.zero, 1f);
-            moneys[moneys.Count - 1].transform.GetComponent<BoxCollider>().enabled = false;
-            moneys.RemoveAt(moneys.Count - 1);
-            charectersBackPos.position -= Vector3.up / 3f;
-            moneyPositions.e.Invoke();
+            moneysOnTheBack.RemoveAt(moneysOnTheBack.Count - 1);
+            charectersBackPos.localPosition -= Vector3.up / 3f;
+            moneyPositions.percentEvent.Invoke();
 
             count++;
+            yield return new WaitForSeconds(.5f);
         }
         moneyPositions.count = count;
 

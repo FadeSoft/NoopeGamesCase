@@ -4,27 +4,21 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
 using TMPro;
-
-public class MoneyPositions : MonoBehaviour
+public class Building : MonoBehaviour
 {
     public int count;
-  
     public List<Transform> moneyPositionList;
     public Image percentImage;
     public TextMeshProUGUI percentTxt;
-
-    public UnityEvent e = new UnityEvent();
+    public UnityEvent percentEvent = new UnityEvent();
 
     private void Start()
     {
-        e.AddListener(ChangePercentText);
+        percentEvent.AddListener(ChangePercentText);
     }
     private void ChangePercentText()
     {
-        print("sadsa-----------");
-        percentImage.fillAmount = count/100f;
-        percentTxt.text = "%"+(count / 100f).ToString();
+        percentImage.fillAmount = count / 100f;
+        percentTxt.text = "%" + (count / 100f).ToString();
     }
-
-
 }

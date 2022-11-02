@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1549408173}
   - component: {fileID: 1549408176}
-  - component: {fileID: 1549408174}
   m_Layer: 0
   m_Name: MoneyPositionsFromBehind
   m_TagString: Untagged
@@ -25,13 +24,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1549408172}
-  m_LocalRotation: {x: 6.134414e-17, y: 0.99999833, z: -0.0018274188, w: 6.112034e-17}
-  m_LocalPosition: {x: 0, y: 0.5366984, z: 0.25997555}
+  m_LocalRotation: {x: 0.70839775, y: -3.308723e-24, z: 8.520034e-25, w: 0.7058135}
+  m_LocalPosition: {x: 0, y: 0.25805533, z: 0.53722763}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1857314015}
-  m_Father: {fileID: 3344618273337526855}
-  m_RootOrder: 0
+  m_Father: {fileID: 8369073250712026591}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &1549408176
 MeshFilter:
@@ -41,22 +40,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1549408172}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1549408174
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1549408172}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86cd21578b7e25d4b9e97469f378af0b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  count: 5
-  numberOfCollectable: 0
-  playerController: {fileID: 451168294}
-  spawnPoint: {x: 0, y: 0, z: 0}
 --- !u!1 &1857314014
 GameObject:
   m_ObjectHideFlags: 0
@@ -210,7 +193,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3344618273337526855}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!137 &3699244284415040869
 SkinnedMeshRenderer:
@@ -541,7 +524,6 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1549408173}
   - {fileID: 8369073250712026591}
   - {fileID: 7198971462878616007}
   m_Father: {fileID: 0}
@@ -623,8 +605,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98e2f913e9b1f6d44a6728ea6e15259f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collectablePos: []
-  collectablePositionsGeneration: {fileID: 1549408174}
+  moneysOnTheBack: []
+  charectersBackParent: {fileID: 0}
+  charectersBackPos: {fileID: 0}
+  moneyPositions: {fileID: 0}
 --- !u!1 &2930437305175003801
 GameObject:
   m_ObjectHideFlags: 0
@@ -838,8 +822,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8661984418643682702}
+  - {fileID: 1549408173}
   m_Father: {fileID: 3344618273337526855}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4075690229269887969
 GameObject:

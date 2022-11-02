@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -8,25 +7,20 @@ public class PlayerMovement : MonoBehaviour
     public DynamicJoystick dynamicJoystick;
     public float movementSpeed;
     public float rotationSpeed;
-   
+
     private void Update()
     {
         if (Input.GetButton("Fire1"))
-        {
             Movement();
-        }
+
         else if (Input.GetButtonUp("Fire1"))
-        {
             SetAnimator(false, true);
-
-        }
-
     }
     private void Movement()
     {
-
         float horizontal = dynamicJoystick.Horizontal;
         float vertical = dynamicJoystick.Vertical;
+
         Vector3 pos = new Vector3(horizontal, 0, vertical) * Time.deltaTime * movementSpeed;
         transform.position += pos;
 
@@ -35,15 +29,11 @@ public class PlayerMovement : MonoBehaviour
         //Quaternion.LookRotation(-direction) burada -direction dememin sebebi modelin localrotasyonunun bozuk olmasý
 
         if (dynamicJoystick.Horizontal != 0 || dynamicJoystick.Vertical != 0)
-        {
             SetAnimator(true, false);
-        }
-        else if (dynamicJoystick.Horizontal == 0 || dynamicJoystick.Vertical == 0)
-        {
 
+        else if (dynamicJoystick.Horizontal == 0 || dynamicJoystick.Vertical == 0)
             SetAnimator(false, true);
 
-        }
     }
 
     private void SetAnimator(bool runState, bool idleState)
