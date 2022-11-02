@@ -1,4 +1,3 @@
-using System.Collections;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -26,7 +25,7 @@ public class PlayerMovement : MonoBehaviour
 
         Vector3 direction = Vector3.forward * vertical + Vector3.right * horizontal;
         transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(-direction), rotationSpeed * Time.deltaTime);
-        //Quaternion.LookRotation(-direction) burada -direction dememin sebebi modelin localrotasyonunun bozuk olmasý
+        //Quaternion.LookRotation(-direction) burada -direction dememin sebebi modelin local rotasyonunun bozuk olmasý
 
         if (dynamicJoystick.Horizontal != 0 || dynamicJoystick.Vertical != 0)
             SetAnimator(true, false);

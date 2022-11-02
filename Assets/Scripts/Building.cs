@@ -6,7 +6,7 @@ using UnityEngine.Events;
 using TMPro;
 public class Building : MonoBehaviour
 {
-    public int count;
+    public int paidMoneyCount;
     public List<Transform> moneyPositionList;
     public Image percentImage;
     public TextMeshProUGUI percentTxt;
@@ -18,7 +18,8 @@ public class Building : MonoBehaviour
     }
     private void ChangePercentText()
     {
-        percentImage.fillAmount = count / 100f;
-        percentTxt.text = "%*" + (count / 100f).ToString();
+        percentImage.fillAmount = paidMoneyCount / 100f;
+        percentTxt.text = "%" + (paidMoneyCount).ToString("F2");
     }
+  
 }

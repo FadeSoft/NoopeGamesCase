@@ -760,7 +760,6 @@ Transform:
   m_LocalPosition: {x: 0, y: 1.5, z: 11.25}
   m_LocalScale: {x: 8, y: 3, z: 2}
   m_Children:
-  - {fileID: 1495798295}
   - {fileID: 1651105900}
   m_Father: {fileID: 0}
   m_RootOrder: 7
@@ -1972,13 +1971,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.20067139, y: -0, z: -0, w: 0.9796586}
+  m_LocalRotation: {x: 0.27448016, y: -0, z: -0, w: 0.96159285}
   m_LocalPosition: {x: 0, y: 7.56, z: -13.18}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 23.152, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 31.862, y: 0, z: 0}
 --- !u!114 &963194229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1992,7 +1991,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1724713384}
-  offset: {x: 0, y: 8, z: -10}
+  offset: {x: 0, y: 10, z: -10}
 --- !u!1 &979557737
 GameObject:
   m_ObjectHideFlags: 0
@@ -2371,7 +2370,7 @@ GameObject:
   - component: {fileID: 1136473218}
   - component: {fileID: 1136473217}
   m_Layer: 0
-  m_Name: Text (TMP)
+  m_Name: BuyBuildingTxt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2745,7 +2744,7 @@ GameObject:
   - component: {fileID: 1413056167}
   - component: {fileID: 1413056166}
   m_Layer: 0
-  m_Name: Image
+  m_Name: BuyAreaImg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2877,7 +2876,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 451168293, guid: eca4bfeb94455044c8d87aa4ae9e6407, type: 3}
       propertyPath: movementSpeed
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 451168293, guid: eca4bfeb94455044c8d87aa4ae9e6407, type: 3}
       propertyPath: dynamicJoystick
@@ -2939,6 +2938,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.x
       value: 104.099
       objectReference: {fileID: 0}
+    - target: {fileID: 1857314014, guid: eca4bfeb94455044c8d87aa4ae9e6407, type: 3}
+      propertyPath: m_Name
+      value: NextMoneyPos
+      objectReference: {fileID: 0}
     - target: {fileID: 1857314015, guid: eca4bfeb94455044c8d87aa4ae9e6407, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2957,7 +2960,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3344618273337526855, guid: eca4bfeb94455044c8d87aa4ae9e6407, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3344618273337526855, guid: eca4bfeb94455044c8d87aa4ae9e6407, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3161,10 +3164,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1495798295}
-  - component: {fileID: 1495798296}
   - component: {fileID: 1495798297}
+  - component: {fileID: 1495798296}
   m_Layer: 0
-  m_Name: MoneyPositions
+  m_Name: BuildingMoneyPos
   m_TagString: SellArea
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3178,8 +3181,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1495798294}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.5, z: -1.527}
-  m_LocalScale: {x: 0.125, y: 0.33333334, z: 0.5}
+  m_LocalPosition: {x: 0, y: 0, z: 8.196}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1357725342}
   - {fileID: 573056483}
@@ -3281,8 +3284,8 @@ Transform:
   - {fileID: 1317541169}
   - {fileID: 454460139}
   - {fileID: 248583249}
-  m_Father: {fileID: 522194241}
-  m_RootOrder: 0
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1495798296
 MonoBehaviour:
@@ -3296,7 +3299,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f91d4724dece6b54c8b66c088b84f43d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  count: 0
+  paidMoneyCount: 0
   moneyPositionList:
   - {fileID: 1357725342}
   - {fileID: 573056483}
@@ -3690,7 +3693,7 @@ RectTransform:
   - {fileID: 1136473216}
   - {fileID: 1738798423}
   m_Father: {fileID: 522194241}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -3865,7 +3868,7 @@ GameObject:
   - component: {fileID: 1738798425}
   - component: {fileID: 1738798424}
   m_Layer: 0
-  m_Name: Image (1)
+  m_Name: PurchasePercentImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3889,7 +3892,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 2.29}
-  m_SizeDelta: {x: 4, y: 3}
+  m_SizeDelta: {x: 5, y: 3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1738798424
 MonoBehaviour:
@@ -3916,7 +3919,7 @@ MonoBehaviour:
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
-  m_FillAmount: 0
+  m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
@@ -4427,7 +4430,7 @@ GameObject:
   - component: {fileID: 2039084320}
   - component: {fileID: 2039084319}
   m_Layer: 0
-  m_Name: Text (TMP) (1)
+  m_Name: PurchasePercentTxt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4472,7 +4475,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '%0'
+  m_text: '-'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4642,7 +4645,7 @@ RectTransform:
   m_Children:
   - {fileID: 897360084}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}

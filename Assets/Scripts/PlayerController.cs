@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
@@ -36,16 +35,15 @@ public class PlayerController : MonoBehaviour
         {
             if (moneysOnTheBack.Count > 0)
             {
-                print("*****");
-                Buy(other.GetComponent<Building>().count);
+                Buy(other.GetComponentInParent<Building>().paidMoneyCount);
             }
         }
     }
 
     private void Buy(int count)
     {
-        int a = moneysOnTheBack.Count;
-        for (int i = 0; i <a; i++)
+        int moneysOnTheBackCount = moneysOnTheBack.Count;
+        for (int i = 0; i <moneysOnTheBackCount; i++)
         {
             GameObject moneyOnBack = moneysOnTheBack[moneysOnTheBack.Count - 1];
             moneyOnBack.transform.parent = moneyPositions.transform;
@@ -58,10 +56,8 @@ public class PlayerController : MonoBehaviour
 
             count++;
         }
-        moneyPositions.count = count;
+        moneyPositions.paidMoneyCount = count;
         moneyPositions.percentEvent.Invoke();
-
-
     }
 }
 
