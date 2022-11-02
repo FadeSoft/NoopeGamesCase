@@ -183,11 +183,6 @@ Transform:
   m_Father: {fileID: 1495798295}
   m_RootOrder: 55
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &97376012 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1857314015, guid: eca4bfeb94455044c8d87aa4ae9e6407, type: 3}
-  m_PrefabInstance: {fileID: 1449017162}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &112915710
 GameObject:
   m_ObjectHideFlags: 0
@@ -1603,11 +1598,6 @@ Transform:
   m_Father: {fileID: 1495798295}
   m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &794610018 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1549408173, guid: eca4bfeb94455044c8d87aa4ae9e6407, type: 3}
-  m_PrefabInstance: {fileID: 1449017162}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &795566293
 GameObject:
   m_ObjectHideFlags: 0
@@ -2875,85 +2865,13 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 451168293, guid: eca4bfeb94455044c8d87aa4ae9e6407, type: 3}
-      propertyPath: movementSpeed
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 451168293, guid: eca4bfeb94455044c8d87aa4ae9e6407, type: 3}
       propertyPath: dynamicJoystick
       value: 
       objectReference: {fileID: 897360085}
     - target: {fileID: 451168294, guid: eca4bfeb94455044c8d87aa4ae9e6407, type: 3}
-      propertyPath: charectersBack
-      value: 
-      objectReference: {fileID: 794610018}
-    - target: {fileID: 451168294, guid: eca4bfeb94455044c8d87aa4ae9e6407, type: 3}
       propertyPath: moneyPositions
       value: 
       objectReference: {fileID: 1495798296}
-    - target: {fileID: 451168294, guid: eca4bfeb94455044c8d87aa4ae9e6407, type: 3}
-      propertyPath: charectersBackPos
-      value: 
-      objectReference: {fileID: 97376012}
-    - target: {fileID: 451168294, guid: eca4bfeb94455044c8d87aa4ae9e6407, type: 3}
-      propertyPath: charectersBackParent
-      value: 
-      objectReference: {fileID: 794610018}
-    - target: {fileID: 451168295, guid: eca4bfeb94455044c8d87aa4ae9e6407, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 451168296, guid: eca4bfeb94455044c8d87aa4ae9e6407, type: 3}
-      propertyPath: m_UseGravity
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1549408173, guid: eca4bfeb94455044c8d87aa4ae9e6407, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1549408173, guid: eca4bfeb94455044c8d87aa4ae9e6407, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.41
-      objectReference: {fileID: 0}
-    - target: {fileID: 1549408173, guid: eca4bfeb94455044c8d87aa4ae9e6407, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.58
-      objectReference: {fileID: 0}
-    - target: {fileID: 1549408173, guid: eca4bfeb94455044c8d87aa4ae9e6407, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.6149788
-      objectReference: {fileID: 0}
-    - target: {fileID: 1549408173, guid: eca4bfeb94455044c8d87aa4ae9e6407, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.7885437
-      objectReference: {fileID: 0}
-    - target: {fileID: 1549408173, guid: eca4bfeb94455044c8d87aa4ae9e6407, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -3.3087225e-24
-      objectReference: {fileID: 0}
-    - target: {fileID: 1549408173, guid: eca4bfeb94455044c8d87aa4ae9e6407, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 8.955792e-25
-      objectReference: {fileID: 0}
-    - target: {fileID: 1549408173, guid: eca4bfeb94455044c8d87aa4ae9e6407, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 104.099
-      objectReference: {fileID: 0}
-    - target: {fileID: 1857314014, guid: eca4bfeb94455044c8d87aa4ae9e6407, type: 3}
-      propertyPath: m_Name
-      value: NextMoneyPos
-      objectReference: {fileID: 0}
-    - target: {fileID: 1857314015, guid: eca4bfeb94455044c8d87aa4ae9e6407, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1857314015, guid: eca4bfeb94455044c8d87aa4ae9e6407, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1857314015, guid: eca4bfeb94455044c8d87aa4ae9e6407, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2675604602461622525, guid: eca4bfeb94455044c8d87aa4ae9e6407, type: 3}
       propertyPath: m_Name
       value: Stickman
@@ -3002,8 +2920,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 1549408174, guid: eca4bfeb94455044c8d87aa4ae9e6407, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eca4bfeb94455044c8d87aa4ae9e6407, type: 3}
 --- !u!1 &1459161203
 GameObject:
