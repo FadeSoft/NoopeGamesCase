@@ -37,16 +37,15 @@ public class PlayerController : MonoBehaviour
             if (moneysOnTheBack.Count > 0)
             {
                 print("*****");
-                StartCoroutine(Buy(other.GetComponent<Building>().count));
-
+                Buy(other.GetComponent<Building>().count);
             }
         }
     }
 
-    private IEnumerator Buy(int count)
+    private void Buy(int count)
     {
-        int moneysCount = moneysOnTheBack.Count;
-        for (int i = 0; i < moneysCount; i++)
+        int a = moneysOnTheBack.Count;
+        for (int i = 0; i <a; i++)
         {
             GameObject moneyOnBack = moneysOnTheBack[moneysOnTheBack.Count - 1];
             moneyOnBack.transform.parent = moneyPositions.transform;
@@ -56,12 +55,13 @@ public class PlayerController : MonoBehaviour
 
             moneysOnTheBack.RemoveAt(moneysOnTheBack.Count - 1);
             charectersBackPos.localPosition -= Vector3.up / 3f;
-            moneyPositions.percentEvent.Invoke();
 
             count++;
-            yield return new WaitForSeconds(.5f);
         }
         moneyPositions.count = count;
+        moneyPositions.percentEvent.Invoke();
+
 
     }
 }
+

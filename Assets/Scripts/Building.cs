@@ -19,6 +19,6 @@ public class Building : MonoBehaviour
     private void ChangePercentText()
     {
         percentImage.fillAmount = count / 100f;
-        percentTxt.text = "%" + (count / 100f).ToString();
+        percentTxt.text = "%*" + (count / 100f).ToString();
     }
 }

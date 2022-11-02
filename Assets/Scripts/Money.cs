@@ -14,7 +14,7 @@ public class Money : MonoBehaviour
     {
         Vector3 movePos = PlayerController.Instance.charectersBackPos.position;
 
-        transform.position = Vector3.Lerp(transform.position, movePos, 3f);
+        transform.position = Vector3.Lerp(transform.position, movePos, 8f);
         transform.DOLocalRotate(Vector3.zero, .3f);
 
         float distance = Vector3.Distance(transform.position, PlayerController.Instance.charectersBackPos.position);

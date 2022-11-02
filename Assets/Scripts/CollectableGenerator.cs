@@ -17,7 +17,7 @@ public class CollectableGenerator : MonoBehaviour
         {
             for (int x = 0; x < widht; x++)
             {
-                int randomValue = Random.Range(0, 3);
+                int randomValue = Random.Range(0, collectables.Length);
                 origin = new Vector3(x - Center(widht), 0, z - Center(height));
                 Instantiate(collectables[randomValue], origin, transform.rotation, transform);
             }
